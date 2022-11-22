@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own Login</title>
+   <style>
+    *{
+    margin: 0px;
+    padding: 0px;
+}
+.Loginpage{
+    /* margin: 500px; */
+    padding: 5px;
+    height: 600px;
+    width: 300px;
+    background-color: pink;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    border-radius: 40px;
+}
+body{
+    background-color: black;
+}
+#user{
+border-radius: 5px;
+width:200px;
+height: 20px;
+margin-left: 40px;
+
+}
+.user,.pass{
+    margin-left: 45px;
+}
+#pass{
+    border-radius: 5px;
+    width:200px;
+    height: 20px;
+    margin-left: 40px;
+}
+.forgot{
+    margin-left: 120px;
+    color:rgb(92, 90, 90);
+}
+.login{
+    border-radius: 20px;
+    height: 50px;
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 80px;
+    background-color:black;
+    color: aliceblue;
+}
+.login:hover{
+    cursor: pointer;
+    color: antiquewhite;
+}
+.social{
+    margin-left: 80px;
+    color:rgb(92, 90, 90);
+}
+.icons{
+    margin-left: 80px;
+}
+.signup{
+    margin-left: 80px;
+    color:rgb(92, 90, 90);
+}
+h3{
+    margin-left: 100px;
+}
+.log{
+    margin-top: 40px;
+}
+img:hover{
+    cursor: pointer;
+}
+h3:hover{
+    cursor: pointer;
+}
+#login_form #email_error,#pass_error{
+    margin-left: 45px;
+    font-size: 14px;
+    color: coral;
+    text-decoration: underline;
+   
+}
+
+   </style> 
+</head>
+<body>
+    <div class="Loginpage">
+        
+        <h1 style="text-align:center ;" class="log">Login</h1>
+        <br><br>
+        <form action="" id="login_form" name="form" onsubmit="return valid()">
+        <label class="user" for="Username">Username Or Email</label>
+        <br>
+        <input type="text" id="user" placeholder="Username" name="user">
+        <div id="email_error">Please fill Your Email or Username</div>
+        <br>
+        <br>
+        <label for="password" class="pass">Password</label>
+        <br>
+        <input type="password" id="pass" placeholder="Password" name="pass" title="Fill up the password" required>
+        <div id="pass_error">Please fill Your Password</div>
+        <br><br>
+        <a href="https://www.google.com" class="forgot">Forgot password?</a>
+        <br>
+        <button class="login">LOGIN</button>
+        <br><br>
+        <p class="social">or Login with</p>
+        <br>
+        
+        <img src="C:/Users/Ajay/Downloads/instagram.png" alt="insta" width="30px" height="30px" class="icons">
+        <img src="C:/Users/Ajay/Downloads/facebook.png" alt="fb" width="30px" height="30px">
+        <img src="C:/Users/Ajay/Downloads/twitter.png" alt="twit" width="30px" height="30px">
+        <br>
+        <br>
+        <br>
+        <p class="signup">Or Sign Up with</p>
+        <br>
+        <h3>Sign Up</h3>
+        </form>
+    
+
+    </div>
+
+
+    <script>
+        var email = document.forms['form']['user'];
+        var pass = document.forms['form']['pass'];
+        var email_err = document.getElementById('email_error');
+        var pass_err = document.getElementById('pass_error');
+        email.addEventListener()
+        var letters = /^[a-zA-Z ]*$/;
+    function valid(){
+        if(email.value.length < 9||email.value.length > 13){
+        email.style.border = "1px solid red";
+        email_err.style.display = "inline";
+        email.focus();
+        return false;
+        }
+        if(pass.value.length < 6 || pass.value.length > 13){  
+        pass.style.border = "1px solid red";
+        pass_err.style.display = "block";
+        pass.focus();
+        return false;
+        }
+        
+        if (email.value.match(letters)){
+            email.style.border = "1px solid red";
+        email_err.style.display = "none";
+        email.focus();
+        return true;    
+     }
+
+
+    }
+</script>
+</body>
+</html>
